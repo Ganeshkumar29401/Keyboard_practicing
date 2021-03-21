@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  color: white;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bolder;
+  height: 100vh;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  position: fixed;
+  top: 4rem;
+}
+
+.foot {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  position: fixed;
+  bottom: 3rem;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid darkturquoise;
+  /* border-radius: 5px; */
+  animation: fade 0.7s infinite both;
+}
+
+.container {
+  padding: 0px;
+}
+
+.row {
+  list-style: none;
+  display: flex;
+  margin: 0px;
+  padding: 10px;
+}
+
+li {
+  height: 4rem;
+  width: 4rem;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  margin: 10px;
+  line-height: 3em;
+}
+
+#back {
+  width: 5rem;
+}
+
+#tab {
+  width: 5rem;
+}
+
+#caps {
+  width: 7rem;
+}
+
+#enter {
+  width: 7rem;
+}
+
+#shift {
+  width: 9.5rem;
+}
+
+.pink {
+  background-color: crimson;
+  color: black;
+  border: 2px solid crimson;
+}
+
+.pink.selected{
+  color: crimson;
+  background-color: black;
+}
+
+.coral {
+  background-color: coral;
+  color: black;
+  border: 2px solid coral;
+}
+
+.coral.selected{
+  color: coral;
+  background-color: black;
+}
+
+.dark-orange {
+  background-color: darkorange;
+  color: black;
+  border: 2px solid darkorange;
+}
+
+.dark-orange.selected{
+  color: darkorange;
+  background-color: black;
+}
+
+.gold {
+  background-color: gold;
+  color: black;
+  border: 2px solid gold;
+}
+
+.gold.selected{
+  color: gold;
+  background-color: black;
+}
+
+.khazhi {
+  background-color: khaki;
+  color: black;
+  border: 2px solid khaki;
+}
+
+.khazhi.selected{
+  color: khaki;
+  background-color: black;
+}
+
+.selected {
+  -webkit-animation: vibrate 0.3s infinite both;
+  animation: vibrate 0.3s infinite both;
+}
+
+.hit {
+  -webkit-animation: hit 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: hit 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes vibrate {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes hit {
+    0% {
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+
+@keyframes fade{
+    0%{
+        border: 5px solid darkturquoise;
+        border-radius: 5px;
+    }
+    50%{
+        border: 0px solid blue;
+    }
+    100%{
+        border: 5px solid darkturquoise;
+        border-radius: 5px;
+    }
+}  
